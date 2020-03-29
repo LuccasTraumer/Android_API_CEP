@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private int inputCep =0;
+    private String inputCep;
     private Button btnBuscar;
 
     @Override
@@ -24,14 +24,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     public void onClick(View v){
         if(v.getId() == R.id.btnBuscar){
-            try{
-                inputCep = new Integer(new Integer(findViewById(R.id.edCep).toString()));
+                inputCep = findViewById(R.id.edCep).toString();
                 Intent it = new Intent(MainActivity.this, SecondScreen.class);
                 it.putExtra("cep",inputCep);
                 startActivity(it);
-            }catch(Exception err){
-                Toast.makeText(getApplicationContext(),"Cep invalido!",Toast.LENGTH_SHORT).show();
-            }
         }
     }
     @Override
