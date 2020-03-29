@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyCepProject</string>
+    <string name="txtCep">CEP:</string>
+    <string name="btnBuscar">Buscar</string>
+    <string name="txtRua">Rua: </string>
+    <string name="btnBuscar">Bairro</string>
+</resources>
